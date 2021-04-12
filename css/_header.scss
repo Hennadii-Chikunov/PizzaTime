@@ -33,7 +33,7 @@
     color: #fff;
     display: block;
     padding: 15px 35px;
-    font-family: $ft-f-m;
+    font-family: $f-mont;
     font-weight: 900;
     font-size: 20px;
     position: relative;
@@ -52,14 +52,14 @@
       border-radius: 35px;
       border: 2px solid #ffa650;
       width: 100%;
-      height: calc(100% + 110px);
+      height: calc(100% + 10px);
       transform: translateY(-50%);
       opacity: 0;
-      transition: all ease 0.9s;
+      transition: color 0.9s, background 0.9s;
     }
     &:hover::before {
       opacity: 1;
-      background: rgba(19, 114, 35, 0.8);
+      background: rgba(19, 114, 35, 0.9);
     }
     &:hover::first-letter {
       color: #ffa650;
@@ -69,7 +69,7 @@
     position: relative;
   }
   .phone__item {
-    font-family: $ft-f-m;
+    font-family: $f-mont;
     font-weight: 900;
     text-decoration: none;
     color: #fff;
@@ -77,7 +77,7 @@
     border: 3px solid #fff;
     border-radius: 21.5px;
     padding: 8px 16px;
-    transition: all 0.4s;
+    transition: color 0.4s, background 0.4s, transform 0.4s;
     @media (max-width: 1200px) {
       font-size: 15px;
       padding: 7px 14px;
