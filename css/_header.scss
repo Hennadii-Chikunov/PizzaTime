@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 5;
-  background: rgba(1, 36, 7, 0.8);
+  background: rgba(68, 0, 8, 0.8);
   padding: 9px 0;
   overflow: hidden;
   &__container {
@@ -26,7 +26,6 @@
     }
   }
   &__list {
-    list-style: none;
     display: flex;
   }
   &__link {
