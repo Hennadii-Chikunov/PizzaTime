@@ -12,12 +12,10 @@
   pointer-events: none;
   overflow: auto;
   color: #ffa650;
-  @media (max-width: 990px) {
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: visible;
-    }
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   &__body {
     display: flex;

@@ -27,17 +27,17 @@
 				  <nav class="header-page__nav">
 					  <ul class="header-page__list">
 						  <li class="header-page__item">
-							  <a href="#" class="header-page__link">
+							  <a href="#" class="header-page__link" data-scroll-to="section-catalog">
 								  <span class="header-page__link-name">пицца</span>
 							  </a>
 						  </li>
 						<li class="header-page__item">
-							<a href="#" class="header-page__link">
+							<a href="#" class="header-page__link" data-scroll-to="section-about">
 								<span class="header-page__link-name">о нас</span>
 							</a>
 						</li>
 						<li class="header-page__item">
-							<a href="#" class="header-page__link">
+							<a href="#" class="header-page__link" data-scroll-to="section-contacts">
 								<span class="header-page__link-name">контакты</span>
 							</a>
 						</li>
@@ -48,7 +48,7 @@
 				  </div>
 				  <!-- меню бургер -->
 				  <div class="header-page__hamburger">
-					  <button class="btn-menu" type="button">
+					  <button class="btn-menu" type="button" data-popup="popup-menu">
 						  <span class="btn-menu__box">
 							  <span class="btn-menu__inner"></span>
 						  </span>
@@ -65,7 +65,7 @@
 			<p class="section-top__info">от итальянского повара</p>
 			<h1 class="section-top__title">Лучшая пицца в Днепре</h1>
 			<div class="section-top__btn">
-				<button class="btn" type="button">Выбрать</button>
+				<button class="btn" type="button" data-scroll-to="section-catalog">Выбрать</button>
 			</div>
 		</div>
 	</section>
@@ -115,7 +115,7 @@
 									<span class="product__price-value">90</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -142,7 +142,7 @@
 									<span class="product__price-value">110</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -169,7 +169,7 @@
 									<span class="product__price-value">100</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -195,7 +195,7 @@
 									<span class="product__price-value">150</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -220,7 +220,7 @@
 									<span class="product__price-value">115</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -246,7 +246,7 @@
 									<span class="product__price-value">85</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -272,7 +272,7 @@
 									<span class="product__price-value">125</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -297,7 +297,7 @@
 									<span class="product__price-value">135</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -324,7 +324,7 @@
 									<span class="product__price-value">140</span>
 									<span class="product__currency">&#8372;</span>
 								</div>
-								<button class="btn product__btn" type="button">заказать</button>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
 						</footer>
 					</div>
@@ -451,17 +451,17 @@
 	<div class="popup popup-menu">
 		<div class="popup__body">
 			<div class="popup__content popup__content--fluid">
-				<button class="btn-close popup__btn-close"></button>
+				<button class="btn-close popup__btn-close popup-close"></button>
 				<nav class="mobile-menu">
 					<ul class="mobile-menu__ul">
 						<li class="mobile-menu__li">
-							<a href="#" class="mobile-menu__link">Пицца</a>
+							<a href="#" class="mobile-menu__link popup-close" data-scroll-to="section-catalog">Пицца</a>
 						</li>
 						<li class="mobile-menu__li">
-							<a href="#" class="mobile-menu__link">О нас</a>
+							<a href="#" class="mobile-menu__link popup-close" data-scroll-to="section-about">О нас</a>
 						</li>
 						<li class="mobile-menu__li">
-							<a href="#" class="mobile-menu__link">Контакты</a>
+							<a href="#" class="mobile-menu__link popup-close" data-scroll-to="section-contacts">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -543,7 +543,7 @@
 	<div class="popup popup-order">
 		<div class="popup__body">
 			<div class="popup__content popup__content--fluid">
-				<button class="btn-close popup__btn-close"></button>
+				<button class="btn-close popup__btn-close popup-close"></button>
                  <h2 class="section__title popup__title">Заполните форму</h2>
 					  <p class="popup__subtitle">Мы привезем вам горячую пиццу за 50 минут</p>
 					  <div class="order">
@@ -575,7 +575,7 @@
 	<div class="popup popup-thanks">
 		<div class="popup__body">
 			<div class="popup__content popup__content--fluid">
-				<button class="btn-close popup__btn-close"></button>
+				<button class="btn-close popup__btn-close popup-close"></button>
 				<h2 class="section__title popup__title">Успешно отправлено</h2>
 				<p class="popup__subtitle popup__subtitle--order">Мы уже начали готовить вашу пиццу</p>
 			</div>
@@ -586,15 +586,17 @@
 	<div class="popup popup-error">
 		<div class="popup__body">
 			<div class="popup__content popup__content--fluid">
-				<button class="btn-close popup__btn-close"></button>
+				<button class="btn-close popup__btn-close popup-close"></button>
 				<h2 class="section__title popup__title">блин! Произошла ошибка</h2>
 				<p class="popup__subtitle popup__subtitle--order">Пожалуйста, сделайте заказ по номеру <a href="tel:+380639999999" class="phone__item popup__item--error">+380 (63) 999-99-99</a></p>
 			</div>
 		</div>
 	</div>
 	<!-- /.popUP-thanks-->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="./js/scripts.js"></script>
+	<!-- подключил СКРИПТЫ JS -->
+	<script src="./js/myLib.js"></script>
+	<script src="./js/header.js"></script>
+	<script src="./js/popup.js"></script>
+	<script src="./js/scrollTo.js"></script>
 </body>
 </html>

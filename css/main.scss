@@ -13,12 +13,11 @@ $f-mont: "Montserrat", sans-serif;
 // Вынес ШАПКУ САЙТА и подвал В ОТДЕЛЬНЫЙ ФАЙЛ scss для удобства
 @import "_header";
 @import "_popups";
-// запретил скролл фона
-@media (min-width: 320px) and (max-width: 990px) {
-  body.lock {
-    overflow: hidden;
-  }
+// отмена скролла при активном попАПЕ
+.no-scroll {
+  overflow: hidden;
 }
+
 * {
   box-sizing: border-box;
   border: 0;
@@ -26,12 +25,14 @@ $f-mont: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
 a {
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 ul {
   list-style: none;

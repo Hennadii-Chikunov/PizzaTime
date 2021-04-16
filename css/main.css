@@ -17,6 +17,8 @@ xs: 576px
   background: rgba(68, 0, 8, 0.8);
   padding: 9px 0;
   overflow: hidden;
+  -webkit-transition: padding 0.4s;
+  transition: padding 0.4s;
 }
 
 .header-page__container {
@@ -90,7 +92,7 @@ xs: 576px
   border-radius: 35px;
   border: 2px solid #ffa650;
   width: 100%;
-  height: calc(100% + 10px);
+  height: calc(100% + -7px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
@@ -168,6 +170,11 @@ xs: 576px
   }
 }
 
+.header-page.is-active {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /* вынес за пределы общих стилей ради общего использования в popup */
 .phone__item {
   font-family: "Montserrat", sans-serif;
@@ -226,12 +233,10 @@ xs: 576px
   color: #ffa650;
 }
 
-@media (max-width: 990px) {
-  .popup.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: visible;
-  }
+.popup.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .popup__body {
@@ -457,10 +462,8 @@ xs: 576px
 }
 
 /* /.popUP mobile nav Header  */
-@media (min-width: 320px) and (max-width: 990px) {
-  body.lock {
-    overflow: hidden;
-  }
+.no-scroll {
+  overflow: hidden;
 }
 
 * {
@@ -479,6 +482,7 @@ img {
 
 a {
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 ul {

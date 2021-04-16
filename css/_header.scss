@@ -7,6 +7,7 @@
   background: rgba(68, 0, 8, 0.8);
   padding: 9px 0;
   overflow: hidden;
+  transition: padding 0.4s;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -52,7 +53,7 @@
       border-radius: 35px;
       border: 2px solid #ffa650;
       width: 100%;
-      height: calc(100% + 10px);
+      height: calc(100% + -7px);
       transform: translateY(-50%);
       opacity: 0;
       transition: color 0.9s, background 0.9s;
@@ -118,6 +119,10 @@
         display: block;
       }
     }
+  }
+  &.is-active {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 /* вынес за пределы общих стилей ради общего использования в popup */
