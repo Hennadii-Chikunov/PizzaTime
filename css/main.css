@@ -249,6 +249,7 @@ xs: 576px
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100%;
   padding: 30px 10px;
 }
 
@@ -260,6 +261,7 @@ xs: 576px
 
 .popup__content {
   background: #003833;
+  background-size: cover;
   padding: 70px 20px;
   width: 760px;
   margin: 0 auto;
@@ -895,6 +897,7 @@ button {
   color: #00ceba;
   font-size: 16px;
   font-weight: 900;
+  text-align: justify;
 }
 
 .section .catalog .product__content {
@@ -913,7 +916,6 @@ button {
           justify-content: space-between;
   margin-bottom: 30px;
   border-radius: 21px;
-  overflow: hidden;
   -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
 }

@@ -78,22 +78,22 @@
 				<nav class="catalog-nav">
 					<ul class="catalog-nav__wrapper">
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn is-active" type="button">все</button>
+							<button class="catalog-nav__btn is-active" type="button" data-filter="all">все</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">грибные</button>
+							<button class="catalog-nav__btn" type="button" data-filter="mushrooms">грибные</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">мясные</button>
+							<button class="catalog-nav__btn" type="button" data-filter="meat">мясные</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">сырные</button>
+							<button class="catalog-nav__btn" type="button" data-filter="cheese">сырные</button>
 						</li>
 					</ul>
 				</nav>
 			</header>
 			<div class="catalog">
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="mushrooms">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/1.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -120,7 +120,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/2.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -147,7 +147,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/3.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -174,7 +174,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/4.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -200,7 +200,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/5.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -225,7 +225,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/6.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -251,7 +251,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="mushrooms">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/7.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -277,7 +277,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/8.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -302,7 +302,7 @@
 						</footer>
 					</div>
 				</div>
-				<div class="catalog__item">
+				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
 						<img src="img/section-catalog/9.png" alt="pizza" class="product__img">
 						<div class="product__content">
@@ -356,7 +356,8 @@
 			  </header>
 			  <div class="contacts">
 				  <div class="contacts__start">
-					  <div class="contacts__map"></div>
+					  <div class="contacts__map" id="gmap">
+					  </div>
 				  </div>
 				<div class="contacts__end">
 					<address>
@@ -549,14 +550,14 @@
 					  <div class="order">
 						  <img class="order__img" src="./img/section-catalog/7.png" alt="pizza">
 						  <h3 class="order__title">
-							  <span>Пепперони</span>
-							  <span>125</span>&#8372;
+							  <span class="order-product-title">Пепперони</span>
+							  <span class="order-product-price">125</span>&#8372;
 						  </h3>
 						  <p class="order__size">35см</p>
 						<form class="form">
-							<input type="hidden" name="пицца">
-							<input type="hidden" name="цена">
-							<input type="hidden" name="размер">
+							<input class="order-info-title" type="hidden" name="пицца">
+							<input class="order-info-price" type="hidden" name="цена">
+							<input class="order-info-size" type="hidden" name="размер">
 							<input type="text" class="form__input" placeholder="Имя" name="имя" required>
 							<input type="tel" class="form__input" placeholder="Телефон" name="телефон" required>
 							<input type="text" class="form__input" placeholder="Адрес" name="адрес" required>
@@ -593,10 +594,16 @@
 		</div>
 	</div>
 	<!-- /.popUP-thanks-->
-	<!-- подключил СКРИПТЫ JS -->
+	<!-- подключил google maps api для тренировки -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1tiQlptUENwpAkWlcsMbyFd2AagGY-fM&callback=initMap&libraries=&v=weekly"
+	async></script>
+	<!-- подключил СКРИПТЫ JS -->                                         
 	<script src="./js/myLib.js"></script>
 	<script src="./js/header.js"></script>
 	<script src="./js/popup.js"></script>
 	<script src="./js/scrollTo.js"></script>
+	<script src="./js/catalog.js"></script>
+	<script src="./js/product.js"></script>
+	<script src="./js/map.js"></script>
 </body>
 </html>

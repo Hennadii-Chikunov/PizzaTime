@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100%;
     padding: 30px 10px;
     @media (max-width: 767px) {
       padding: 0;
@@ -28,6 +29,7 @@
   }
   &__content {
     background: #003833;
+    background-size: cover;
     padding: 70px 20px;
     width: 760px;
     margin: 0 auto;
