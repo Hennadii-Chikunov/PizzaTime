@@ -6,7 +6,7 @@ function initMap() {
 	};
 	var myMap = new google.maps.Map(element, options);
    var icon = {
-    url: "../img/common/marker.svg", // url
+    url: '../img/common/marker.svg', // url
     scaledSize: new google.maps.Size(50, 50), // scaled size
     origin: new google.maps.Point(0,0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
