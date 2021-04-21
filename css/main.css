@@ -380,6 +380,8 @@ xs: 576px
 
 .header-page .logo__img {
   cursor: pointer;
+  width: 127px;
+  height: 19px;
 }
 
 .header-page__end {
@@ -631,7 +633,7 @@ xs: 576px
 @media (max-width: 767px) {
   .popup__content {
     max-width: 100%;
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
     border-radius: 0;
     padding: 0;
@@ -913,7 +915,7 @@ button {
 .section-top {
   height: 100vh;
   min-height: 600px;
-  background: #0e1419 url(../img/section-top/bg-header.jpg) no-repeat center;
+  background: #0e1419 no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   color: #00ceba;
@@ -951,6 +953,7 @@ button {
 .section-top__container {
   position: relative;
   width: 520px;
+  margin: 0;
 }
 
 .section-top__info {
@@ -1236,6 +1239,14 @@ button {
 .section .catalog .product__img {
   display: block;
   margin: 0 auto 15px;
+  width: 340px;
+  height: 339px;
+}
+
+@media (max-width: 1200px) {
+  .section .catalog .product__img {
+    height: auto;
+  }
 }
 
 .section .catalog .product__title {
@@ -1458,10 +1469,9 @@ button {
   position: relative;
 }
 
-.section-contacts__container::before {
-  content: "";
+.section-contacts__container .section-contacts__img {
   position: absolute;
-  background: url(../img/section-contacts/tomatoes.png) no-repeat;
+  background: no-repeat;
   background-size: cover;
   width: 672px;
   max-width: 100%;
@@ -1471,22 +1481,22 @@ button {
 }
 
 @media (max-width: 1200px) {
-  .section-contacts__container::before {
+  .section-contacts__container .section-contacts__img {
     width: 600px;
     right: -200px;
   }
 }
 
 @media (max-width: 1100px) {
-  .section-contacts__container::before {
+  .section-contacts__container .section-contacts__img {
     right: -200px;
     bottom: -170px;
   }
 }
 
 @media (max-width: 1098px) {
-  .section-contacts__container::before {
-    content: none;
+  .section-contacts__container .section-contacts__img {
+    display: none;
   }
 }
 

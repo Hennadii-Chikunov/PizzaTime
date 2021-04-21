@@ -4,12 +4,26 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PizzaTime</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@300&display=swap"
 		rel="stylesheet">
 	<!-- Подключил ФАЙЛ СТИЛЕЙ (но, работаю в SCSS) -->
 	<link rel="stylesheet" href="css/main.css">
+	<meta name="description" content="PizzaTime — Лучшая пицца в Днепре от итальянского повара">
+	<meta name="keywords" content="пицца">
+	<meta property="og:title" content="PizzaTime — Лучшая пицца в Днепре от итальянского повара" />
+	<meta property="og:description" content="PizzaTime — Лучшая пицца в Днепре от итальянского повара" />
+	<meta property="og:image" content="img/section-top/bg-header.jpg" />
+    <!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- /.favicon -->
+	<title>PizzaTime — Лучшая пицца в Днепре от итальянского повара</title>
 </head>
 <body>
 	 <!-- header PAGE -->
@@ -18,7 +32,7 @@
            <div class="header-page__start">
 				  <div class="logo">
 					  <!-- ИНЛАЙН СТИЛИ ПРОПИСАНЫ ДЛЯ ЛОГО С ЦЕЛЬЮ защитить размеры при "слете внешних стилей" -->
-					  <img src="./img/common/logo.svg" alt="PizzaTime" class="logo__img" width="127" height="21">
+					  <img  data-src="./img/common/logo.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="PizzaTime" class="logo__img lazy"  width="127" height="21">
 				  </div>
 			  </div>
 			  <div class="header-page__end">
@@ -58,7 +72,7 @@
 	 </header>
 	 <!-- / .header PAGE -->
 	 <!-- section-TOP -->
-	<section class="section-top">
+	<section class="section-top lazy" data-bg="img/section-top/bg-header.webp" data-bg-replace-webp="img/section-top/bg-header.jpg">
 		<div class="container section-top__container">
 			<p class="section-top__info">от итальянского повара</p>
 			<h1 class="section-top__title">Лучшая пицца в Днепре</h1>
@@ -93,7 +107,10 @@
 			<div class="catalog">
 				<div class="catalog__item" data-category="mushrooms">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/1.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-srcset="img/section-catalog/1.webp"/>
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/1.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Салями</h3>
 							<p class="product__description">
@@ -120,7 +137,10 @@
 				</div>
 				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/2.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/2.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/2.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Хит</h3>
 							<p class="product__description">
@@ -147,7 +167,10 @@
 				</div>
 				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/3.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/3.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/3.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Ветчина-грибы</h3>
 							<p class="product__description">
@@ -174,7 +197,10 @@
 				</div>
 				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/4.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/4.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/4.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Карбонара</h3>
 							<p class="product__description">
@@ -200,7 +226,10 @@
 				</div>
 				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/5.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/5.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/5.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Фирменная</h3>
 							<p class="product__description">
@@ -225,7 +254,10 @@
 				</div>
 				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/6.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/6.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/6.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Ассорти</h3>
 							<p class="product__description">
@@ -251,7 +283,10 @@
 				</div>
 				<div class="catalog__item" data-category="mushrooms">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/7.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/7.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/7.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Л-01</h3>
 							<p class="product__description">
@@ -277,7 +312,10 @@
 				</div>
 				<div class="catalog__item" data-category="meat">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/8.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/8.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/8.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Три Сыра</h3>
 							<p class="product__description">
@@ -302,7 +340,10 @@
 				</div>
 				<div class="catalog__item" data-category="cheese">
 					<div class="product catalog__product">
-						<img src="img/section-catalog/9.png" alt="pizza" class="product__img">
+						<picture>
+							<source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="img/section-catalog/9.webp" />
+							<img class="product__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/section-catalog/9.png" alt="A lazy image pizza" />
+						</picture>
 						<div class="product__content">
 							<h3 class="product__title">Мясная</h3>
 							<p class="product__description">
@@ -333,7 +374,10 @@
 	<!-- / section CATALOG -->
 	<!-- section ABOUT -->
 	<section class="section section-about">
-		<img src="./img/section-about/bg.jpg" alt="about-bg" class="section-about__img">
+		<picture>
+			<source type="image/webp" data-srcset="img/section-about/bg.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
+			<img class="section-about__img lazy" data-src="img/section-catalog/9.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="about-bg" />
+		</picture>
 		<div class="container section-about__container">
            <div class="section-about__content">
 				  <h2 class="section__title section-about__title">О нас</h2>
@@ -349,6 +393,7 @@
 	<!-- section CONTACTS -->
 	<section class="section section-contacts">
         <div class="container section-contacts__container">
+			<div class="section-contacts__img lazy" data-bg="img/section-contacts/tomatoes.webp" data-bg-replace-webp="img/section-contacts/tomatoes.png"></div>
 			  <header class="section__header">
 				  <h2 class="section__title section-contacts__title">Контакты</h2>
 			  </header>
@@ -597,6 +642,8 @@
 	<!-- /.popUP-thanks-->
 	<!-- подключил библиотеку focus VISIBLE для людей с ограниченными возможностями -->
 	<script src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.js"></script>
+	<!-- подключил библиотеку lazyLoad -->
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 	<!-- подключил СКРИПТЫ JS -->    
 	<script src="./js/main.js"></script>                                     
 </body>

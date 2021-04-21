@@ -452,7 +452,7 @@ button {
 .section-top {
   height: 100vh;
   min-height: 600px;
-  background: #0e1419 url(../img/section-top/bg-header.jpg) no-repeat center;
+  background: #0e1419 no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   color: #00ceba;
@@ -478,6 +478,8 @@ button {
   &__container {
     position: relative;
     width: 520px;
+    // в IE 11 ПРОИСХОДИЛ сдвиг текстового блока, решение margin 0
+    margin: 0;
   }
   &__info {
     font-size: 24px;
@@ -692,6 +694,12 @@ button {
       &__img {
         display: block;
         margin: 0 auto 15px;
+        // высота и ширина были заданы в фиксированно, чтобы не было скачков изображений при обновлении страницы
+        width: 340px;
+        height: 339px;
+        @media (max-width: 1200px) {
+          height: auto;
+        }
       }
       &__title {
         margin: 0 0 10px;
@@ -840,10 +848,9 @@ button {
   }
   &__container {
     position: relative;
-    &::before {
-      content: "";
+    .section-contacts__img {
       position: absolute;
-      background: url(../img/section-contacts/tomatoes.png) no-repeat;
+      background: no-repeat;
       background-size: cover;
       width: 672px;
       max-width: 100%;
@@ -859,7 +866,7 @@ button {
         bottom: -170px;
       }
       @media (max-width: 1098px) {
-        content: none;
+        display: none;
       }
     }
   }

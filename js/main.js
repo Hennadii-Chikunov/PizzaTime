@@ -1,5 +1,43 @@
-/* myLib start */
+/* libs */
+;(function () {
+	// данный скрипт выполняет задачу lazy load BG изображения в формате webP
+	// такой функции нет в библиотеке, поэтому был написан этот скрипт
+	var canUseWebP = function () {
+		var elem = document.createElement('canvas');
 
+		if (!!(elem.getContext && elem.getContext('2d'))) {
+			// was able or not to get WebP representation
+			return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+		}
+		// very old browser like IE 8, canvas not supported
+		return false;
+	};
+	var isWebpSupported = canUseWebP();
+	// если браузер не поддерживает webp 
+	if (isWebpSupported === false) {
+		// здесь у нас такая проверка, что...
+		// если браузер не поддерживает webp 
+		// тогда мы находим все элементы с атрибутом data-src-replace-webp
+		var lazyItems = document.querySelectorAll('[data-src-replace-webp]');
+		// запускаем цикл
+		for (var i = 0; i < lazyitems.length; i += 1) {
+			// и для каждого элемента проверяем,если у него есть
+			var item = lazyItems[i];
+		}// этот data-bg-replace-webp атрибут
+		var dataSrcReplaceWebp = item.getAttribute('data-bg-replace-webp');
+		// и он не равен null 
+		if (dataSrcReplaceWebp !== null) {
+			// тогда мы вставляем data-src новое значение
+			item.setAttribute('data-src', dataSrcReplaceWebp);
+		}
+	}
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy"	
+});
+})();
+/* libs finish*/
+
+/* myLib start */
 // пишем самовызывающую функцию 
 ;(function () {
 	window.myLib = {};
