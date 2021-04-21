@@ -8,8 +8,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@300&display=swap"
 		rel="stylesheet">
-		<!-- Подключил СБРОС СТИЛЕЙ -->
-	<link rel="stylesheet" href="css/normalize.css">
 	<!-- Подключил ФАЙЛ СТИЛЕЙ (но, работаю в SCSS) -->
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -106,9 +104,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -133,9 +131,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -160,9 +158,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -186,9 +184,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -211,9 +209,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -237,9 +235,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -263,9 +261,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -288,9 +286,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -315,9 +313,9 @@
 						</div>
 						<footer class="product__footer">
 							<div class="product__sizes">
-								<button class="product__size is-active">40см</button>
-								<button class="product__size">35см</button>
-								<button class="product__size">30см</button>
+								<button data-product-size-price="150" class="product__size is-active">40см</button>
+								<button data-product-size-price="135" class="product__size">35см</button>
+								<button data-product-size-price="105" class="product__size">30см</button>
 							</div>
 							<div class="product__bottom">
 								<div class="product__price">
@@ -597,14 +595,9 @@
 		</div>
 	</div>
 	<!-- /.popUP-thanks-->
-	<!-- подключил СКРИПТЫ JS -->                                         
-	<script src="./js/myLib.js"></script>
-	<script src="./js/header.js"></script>
-	<script src="./js/popup.js"></script>
-	<script src="./js/scrollTo.js"></script>
-	<script src="./js/catalog.js"></script>
-	<script src="./js/product.js"></script>
-	<script src="./js/map.js"></script>
-	<script src="./js/form.js"></script>
+	<!-- подключил библиотеку focus VISIBLE для людей с ограниченными возможностями -->
+	<script src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.js"></script>
+	<!-- подключил СКРИПТЫ JS -->    
+	<script src="./js/main.js"></script>                                     
 </body>
 </html>
