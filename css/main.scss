@@ -367,11 +367,14 @@ $f-mont: "Montserrat", sans-serif;
 // Вынес ШАПКУ САЙТА и подвал В ОТДЕЛЬНЫЙ ФАЙЛ scss для удобства
 @import "_header";
 @import "_popups";
+
 // отмена скролла при активном попАПЕ
 .no-scroll {
   overflow: hidden;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
   border: 0;
@@ -697,6 +700,11 @@ button {
         // высота и ширина были заданы в фиксированно, чтобы не было скачков изображений при обновлении страницы
         width: 340px;
         height: 339px;
+        cursor: pointer;
+        transition: transform 0.7s;
+        &:hover {
+          transform: scale(1.2);
+        }
         @media (max-width: 1200px) {
           height: auto;
         }
@@ -924,6 +932,7 @@ button {
       color: #ffa650;
       font-weight: 900;
       border: 1px dashed transparent;
+      border-radius: 10px;
       padding: 5px 10px;
       transition: border 0.3s;
       &:hover {

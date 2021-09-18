@@ -597,7 +597,6 @@ xs: 576px
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100%;
-  padding: 30px 10px;
 }
 
 @media (max-width: 767px) {
@@ -713,9 +712,24 @@ xs: 576px
   margin: 0 0 30px;
 }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .form__input {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  width: 550px;
   padding: 20px 28px;
   background: #f7f7f7;
   border-radius: 32px;
@@ -727,8 +741,44 @@ xs: 576px
 .form__input:focus {
   border-color: #430008;
   border-width: 3px;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+}
+
+.form__btn {
+  background: #015829;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  padding: 18px 20px;
+  width: 550px;
+  max-width: 100%;
+  border-radius: 28px;
+  border: 2px solid #ffa650;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  -webkit-box-shadow: 0px 0px 38px 0px rgba(176, 221, 14, 0.8);
+          box-shadow: 0px 0px 38px 0px rgba(176, 221, 14, 0.8);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.form__btn:hover,
+.form__btn :focus {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 576px) {
+  .form__btn {
+    padding: 16px 20px;
+    width: 200px;
+    font-size: 16px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .btn-close {
@@ -813,6 +863,10 @@ xs: 576px
 /* /.popUP mobile nav Header  */
 .no-scroll {
   overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -1241,6 +1295,16 @@ button {
   margin: 0 auto 15px;
   width: 340px;
   height: 339px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.section .catalog .product__img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media (max-width: 1200px) {
@@ -1583,6 +1647,7 @@ button {
   color: #ffa650;
   font-weight: 900;
   border: 1px dashed transparent;
+  border-radius: 10px;
   padding: 5px 10px;
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
